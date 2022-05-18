@@ -1,0 +1,13 @@
+body {background-color: #455A64;
+ display: inline;
+margin: 0;}
+hr {height:2px;border-width:0;color:white;background-color:white;}
+h3 {color:white;font-family:Gabriola;font-size:40px;left:370px;position: relative;text-shadow: 0 0 10px black;}
+ul,ol {color:white;text-shadow: 0 0 10px black;}
+table,th,td{color:white;font-size:20px;text-align: center;left:100px; border-width:5px;
+    border-style:double;position: sticky;text-shadow: 0 0 10px black;}
+.logo{width:20%;height:20%;}
+a{color:#fff; text-shadow: 0 0 10px black;font-family: 'Zen Antique', serif;}
+.nav-item{ padding: 0 10px;}
+.navbar{padding-bottom:2rem;}
+.nav-link{font-size:1.2rem;}

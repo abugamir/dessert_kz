@@ -1,0 +1,17 @@
+body {background-color: #455A64;
+ display: inline;
+margin: 0;}
+hr {height:2px;border-width:0;color:white;background-color:white;}
+h1{text-align:center;color:white;font-family:New Century Schoolbook, TeX Gyre Schola, serif;font-weight: 100;}
+p {clear:left;color:white;text-indent:100px;text-transform:uppercase;display: inline;font:fontawesome;}
+h3 {color:white; font-weight: bold; text-align: center;}
+h4{font-family: 'Zen Antique', serif;color:white;}
+.container-fluid{padding: 2% 15% ;}
+h2 {color:white;font-family:Gabriola;font-size:40px;left:450px;position: relative;}
+.nav-item{ padding: 0 10px;}
+.navbar{padding-bottom:2rem;}
+.nav-link{font-size:1.2rem;}
+.logo{width:20%;height:20%;}
+.card{width:300px;height: 330px;display:inline-grid;border-radius: 10px;transition:0.5s; padding: 30px 40px;box-sizing:content-box;cursor:col-resize;margin:15px 15px;position: center;}
+.card:hover .overlay {opacity: 1;}
+a{color:#fff; text-shadow: 0 0 10px black;font-family: 'Zen Antique', serif;}

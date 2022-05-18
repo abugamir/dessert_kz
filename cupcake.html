@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/styyle0.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--bootstrap link -->
+ 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/95dda36ed8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<!-- font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styyle0.css">
+ 	  <title>CUPCAKE</title>
+      <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cupcake_1f9c1.png" type="image/png">
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html"><img src="photo/KST.jpg" class="logo"> DESSERTS RECIPES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="recipes.html">Recipes</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#press">Books</a>
+      </li>
+  </ul>
+</div>
+</nav>
+      <hr>
+
+<br>
+<h2>Chocolate Cupcakes</h2>
+<br>
+<img src="photo/cupcake.jpg" height="400" alt="Aish" align="right" hspace="300px" >
+
+  <br>
+  <table>
+
+    <thead>
+  <tr>
+    <th><input type="checkbox" onclick='checkUncheck(this)'/>Products</th>
+    <th>weight</th>
+  </tr>
+</thead>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Butter</td>
+    <td>10 tablespoons</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Sugar</td>
+    <td>¼ cups </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Eggs</td>
+    <td>4 pcs.</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Flour</td>
+    <td>½ cups</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Cocoa powder</td>
+    <td>¾ cup unsweetened </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Baking powder</td>
+    <td>2 teaspoons</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Salt</td>
+    <td>¼ teaspoon</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Milk</td>
+    <td>¾ cup</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" class="checkbox" name="1">Vanilla extract</td>
+    <td>1 teaspoon </td>
+  </tr>
+</table>
+<script>
+function checkUncheck(main) {
+  all = document.getElementsByName('1');
+  for(var a=0;a<all.length;a++) {
+    all[a].checked = main.checked;
+  }
+}
+</script>
+<br>
+
+<br>
+<br>
+<ol>
+  <li>Preheat oven to 350 degrees F (175 degrees C). Grease two muffin pans or line with 20 paper baking cups.</li>
+  <li>In a medium bowl, beat the butter and sugar with an electric mixer until light and fluffy. Mix in the eggs, almond extract and vanilla. Combine the flour, cocoa, baking powder and salt; stir into the batter, alternating with the milk, just until blended. Spoon the batter into the prepared cups, dividing evenly.</li>
+  <li>Bake in the preheated oven until the tops spring back when lightly pressed, 20 to 25 minutes. Cool in the pan set over a wire rack. When cool, arrange the cupcakes on a serving platter. Frost with your favorite frosting.</li>
+
+<li>Decorate the cupcakes as desired</li>
+</ol>
+
+  </body>
+</html>

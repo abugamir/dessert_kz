@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/styyle4.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--bootstrap link -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/95dda36ed8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+<!-- font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styyle4.css">
+ 	  <title>TARTLETS</title>
+        <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cupcake_1f9c1.png" type="image/png">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html"><img src="photo/KST.jpg" class="logo"> DESSERTS RECIPES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="recipes.html">Recipes</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#press">Books</a>
+      </li>
+  </ul>
+</div>
+</nav>
+      <hr>
+<br>
+<h3>Tartlets with vanilla cream, raspberries and whipped cream</h3>
+<br>
+<br>
+  <img src="photo/tartaletka.jpg" height="400" alt="Aish"  align="right" hspace="150px" >
+  <br>
+  <table>
+  <tr>
+    <th><input type="checkbox" onclick='checkUncheck(this)'/>Products</th>
+    <th>weight</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Flour</td>
+    <td>250 g</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Egg</td>
+    <td>11 yolks</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Salt</td>
+    <td>1 pinch</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Sugar</td>
+    <td>120 g</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Cold water</td>
+    <td>1-2 tbsp</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Butter</td>
+    <td>195 g</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >35% cream</td>
+    <td>200 g</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Vanilla pod</td>
+    <td>1-2 pcs</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Milk</td>
+    <td>780 ml</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Powdered sugar</td>
+      <td>180 g </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Corn starch</td>
+        <td>67 g</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Rasperry jam</td>
+          <td>100-150 g</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >lemon juice</td>
+            <td> &#189 lemon </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="checkbox9" class="checkbox" name="1" >Fresh berries</td>
+              <td>For decoration</td>
+              </tr>
+
+</table>
+<script>
+function checkUncheck(main) {
+  all = document.getElementsByName('1');
+  for(var a=0;a<all.length;a++) {
+    all[a].checked = main.checked;
+  }
+}
+</script>
+
+
+<br>
+<br>
+<ol>
+  <li>Dough. Sift the flour into a bowl, add salt and sugar. Cut the butter into cubes and mix with the flour. Add the egg yolks and a little water (1 tbsp. at first) and quickly knead the dough. Wrap in clingfilm and place in the refrigerator for at least 30 minutes.</li>
+  <li></li>Roll out the cooled dough (quite thinly) on a floured surface (or better yet, on baking paper). Grease the tartlet molds with butter and sprinkle lightly with flour. Transfer the rolled out dough (conveniently along with the paper) and distribute it over the molds.* Pierce the bottom of the base with a fork all around. Place baking paper on top of the dough and place a weight (beans, peas, etc.). This is called "blind baking", and it is necessary so that the dough "stay in place" and not move out or rise too much (because we will need to put the filling there). Bake in a preheated oven at 180 g. for about 20 minutes.
+  <li>Vanilla Custard. Cut the vanilla pod in half and remove the seeds. Put the pod and seeds in a saucepan and fill with milk. Bring everything to a boil over medium heat. Whisk the yolks, sugar and cornstarch in a separate bowl, and now pour to them 3 tbsp. of hot milk, mix. When the mixture becomes homogeneous, pour in a thin stream into a saucepan with the milk. Place on a low heat and bring to a boil, stirring constantly with a whisk. Continue to stir for 3 to 5 minutes more until it thickens. At the end add butter (diced) and stir until smooth. Remove from the heat and strain the cream using a sieve (the vanilla pod will remain in the sieve). Let the cream cool, place in a bowl with a lid, and leave to set in the refrigerator until ready to use.</li>
+  <li>Fill the cooled tartlets with the cream. It is handy to use a piping bag so that the cream looks prettier. Garnish with fresh berries. Whip the cream. Warm the jam with lemon juice. Decorate the tartlets with whipped cream and drips of jam.</li>
+</ol>
