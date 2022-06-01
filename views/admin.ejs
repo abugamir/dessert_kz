@@ -122,5 +122,67 @@
         </form>
       </div>
     </div>
+
+    <div class="functions">
+      <h2>Adding Desserts</h2>
+      <form action="/addDessert" method="POST" enctype="multipart/form-data">
+        <div class="labelInput">
+          <label>Dessert name:</label>
+          <input
+            name="dessert_name"
+            type="text"
+            placeholder="Dessert name"
+            id="dessert_name"
+          />
+        </div>
+        <div class="labelInput">
+          <label>Dessert author</label>
+          <input
+            name="dessert_author"
+            type="text"
+            placeholder="Dessert author"
+            id="dessert_author"
+          />
+        </div>
+        <div class="labelInput">
+          <label>Dessert calorie:</label>
+          <input
+            name="dessert_calorie"
+            type="text"
+            placeholder="Dessert calorie"
+            id="dessert_calorie"
+          />
+        </div>
+        <div class="labelInput">
+          <label>Dessert categories:</label>
+          <input
+            name="dessert_categ"
+            type="text"
+            placeholder="Dessert categories"
+            id="dessert_categ"
+          />
+        </div>
+        <div class="labelInput">
+          <label>Dessert time:</label>
+          <input
+            name="dessert_time"
+            type="text"
+            placeholder="Dessert time"
+            id="dessert_time"
+          />
+        </div>
+        <div class="desc">
+          <label class="desc_label">Dessert description:</label>
+          <textarea
+            name="dessert_desc"
+            type="text"
+            id="dessert_desc"
+            class="desc_input"
+          ></textarea>
+        </div>
+        
+        <button type="submit" class="button">Add</button>
+      </form>
+    </div>
   </body>
 </html>

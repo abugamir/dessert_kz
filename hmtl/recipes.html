@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="css/styyle.css">
+ 	  <title>DESSERTS</title>
+    <!-- icon-->
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cupcake_1f9c1.png" type="image/png">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	  <title>DESSERTS</title>
+
+  <!--bootstrap link -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/b425fa76f4.js" crossorigin="anonymous"></script>
+  <!-- font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+<!--bootstrap script -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styylee.css">
+     <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+</head>
+<body style="background:url(photo/back1.png)";>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html"><img src="photo/KST.jpg" class="logo"> DESSERTS RECIPES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="recipes.html">Recipes</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="#press">Books</a>
+      </li>
+  </ul>
+</div>
+</nav>
+<article>  <h1>DESSERTS RECIPES</h1>
+
+  <br>
+      <hr>
+ 
+<br>
+<br>
+<div class="row">
+    <div class="feature-box col-lg-4">
+  <div class="card card1" style="background:url(photo/rulet.jpg);background-size: 570px 370px;background-position:center;">
+     <a href="rulet.html" style="color:white;"> Meringue  pistachio  roll  with  raspberriesl </a>
+  <div class="overlay"></div>
+   </div>
+ </div>
+       <div class="feature-box col-lg-4">
+   <div class="card card2" style="background:url(photo/shoko-fondan.jpg);background-size: 800px 400px;background-position:center;">
+<a href="shoko-fondan.html" style="color:white;"> Shoko-fondan</a>
+  <div class="overlay"></div>
+    </div>
+     </div>
+      <div class="feature-box col-lg-4">
+    <div class="card card3" style="background:url(photo/tartaletka.jpg);background-size: 900px 400px;background-position:center;">
+ <a href="Tartlets.html" style="color:white;">Tartlets</a>
+   <div class="overlay"></div>
+     </div>
+      </div>
+       <div class="feature-box col-lg-4">
+     <div class="card card4" style="background:url(photo/cupcake.jpg);background-size: 450px 450px;background-position:center;">
+  <a href="cupcake.html" style="color:white;">Chocolate cupcakes</a>
+    <div class="overlay"></div>
+      </div>
+
+       </div>
+        <div class="feature-box col-lg-4">
+   <div class="card card5" style="background:url(photo/moloko.jpg);background-size: 650px 400px;background-position:center;">  <a href="moloko.html" style="color:white;">Milky girl</a>
+   <!--<a href="moloko.html" style="color:white;">Milky girl</a> -->
+     <div class="overlay"></div>
+       </div>
+        </div>
+         <div class="feature-box col-lg-4">
+       <div class="card card6" style="background:url(photo/medovik.jpg);background-size: 500px 500px;background-position:center;">
+    <a href="honeydew.html" style="color:white;">Honeydew</a>
+      <div class="overlay"></div>
+        </div>
+         </div>
+ </div>
+<br>
+ <h4>If you want to buy the products you need for dessert, you can see on the map, where the nearest stores are</h4>
+ <div id="map"></div>
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:8,
+        center:{lat:51.1801,lng:71.4459}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:51.1801,lng:71.4459},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:51.1801,lng:71.4459},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:51.1801,lng:71.4459}
+        }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIb_aaM3oosxNg9v3LqUlDbTEpJC133hQ&callback=initMap">
+    </script>
+ </body>
+ </html>

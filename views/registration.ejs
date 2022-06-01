@@ -176,8 +176,8 @@
 
   <body>
     <div class="error_block">
-      <% if (typeof alert != 'undefined') { %> <%
-      alert.forEach(function(error){%>
+      <% if (typeof alert != 'undefined') { %>
+      <% alert.forEach(function(error){%>
 
       <div class="error_message"><%=error.msg %></div>
 
@@ -215,7 +215,7 @@
         autocomplete="off"
       />
 
-      <button type="submit">Register</button>
+      <button type="submit" onclick="loginToRegister()">Register</button>
       <div class="signup_link">
         Already have an account? <a href="/login">Sign in</a>
       </div>
@@ -225,5 +225,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

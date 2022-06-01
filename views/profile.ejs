@@ -1,166 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSS User Profile Card</title>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<html>
+<head>
+ 	  <title>DESSERTS</title>
+    <!-- icon-->
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cupcake_1f9c1.png" type="image/png">
     <link rel="stylesheet" href="css/profile.css" />
-  </head>
-  <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="css/main-style.css">
+        <link rel="stylesheet" href="css/styyle.css">
+    	<title>DESSERTS</title>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        font-family: "Josefin Sans", sans-serif;
-      }
+  <!--bootstrap link -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/b425fa76f4.js" crossorigin="anonymous"></script>
+  <!-- font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+<!--bootstrap script -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body style="background:url(img/back1.png)">
+ <nav class="navbar navbar-expand-lg navbar-dark" >
+    <a class="navbar-brand" href="/"><img src="img/KST.jpg" class="logo"> DESSERTS RECIPES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+      </li>
+       <li class="nav-item">
+          <a class="nav-link" href="/recipes">Recipes</a>
+      </li>
+    <% if (login == "islog") { %>
+      <li class="nav-item profile_nav">
+     
+     
+  
+                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/moloko.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                    <div class="dropdown-menu dropdown-menu-right nav-user-dropdown dropdown_nav" aria-labelledby="navbarDropdownMenuLink2" >
+                        <div class="nav-user-info">
+                                <% userInfo.forEach(function(user) { %>
+                            <h5 class="mb-0 text-white nav-user-name"><%=user.username %> </h5>
+                            <span class="status"></span><span class="ml-2">
+                              <%=user.city %> 
+                            </span>
+                        </div>
+                      <a class="dropdown-item" href="/profile"><i class="fas fa-user mr-2"></i>Profile</a>
+                        <a class="dropdown-item" href="/profile_edit"><i class="fas fa-user mr-2"></i>Edit Profile</a>
+                        <a class="dropdown-item" href="/logout"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                    </div>
+                          <% }) %>
+              
+  
+</li>
 
-      body {
-        background-color: #f3f3f3;
-      }
+     <% } else { %>
+     <li class="nav-item">
+        <a class="nav-link" href="/login" id="loginID">Login</a>
+      </li>
+    <% } %> 
 
-      .wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 450px;
-        display: flex;
-        box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-      }
+  </ul>
+</div>
+</nav>
 
-      .wrapper .left {
-        width: 35%;
-        background: linear-gradient(to right, #455a64, #353f43);
-        padding: 30px 25px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        text-align: center;
-        color: #fff;
-      }
 
-      .wrapper .left img {
-        border-radius: 5px;
-        margin-bottom: 10px;
-      }
 
-      .wrapper .left h4 {
-        margin-bottom: 10px;
-      }
+<!--Content section-->
+<section class="main-content">
+  <div class="container">
+    <h1 class="titleT">Favourite recipes</h1>
+       <% dessertInfo.forEach(function(dessert) { %>
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-12">
+          <div class="food-card food-card--vertical">
+              <div class="food-card_img">
 
-      .wrapper .left p {
-        font-size: 12px;
-      }
-
-      .wrapper .right {
-        width: 65%;
-        background: #fff;
-        padding: 30px 25px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-
-      .wrapper .right .info,
-      .wrapper .right .projects {
-        margin-bottom: 25px;
-      }
-
-      .wrapper .right .info h3,
-      .wrapper .right .projects h3 {
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #e0e0e0;
-        color: #353c4e;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
-
-      .wrapper .right .info_data,
-      .wrapper .right .projects_data {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .wrapper .right .info_data .data,
-      .wrapper .right .projects_data .data {
-        width: 45%;
-      }
-
-      .wrapper .right .info_data .data h4,
-      .wrapper .right .projects_data .data h4 {
-        color: #353c4e;
-        margin-bottom: 5px;
-      }
-
-      .wrapper .right .info_data .data p,
-      .wrapper .right .projects_data .data p {
-        font-size: 13px;
-        margin-bottom: 10px;
-        color: #919aa3;
-      }
-
-      .wrapper .social_media ul {
-        display: flex;
-      }
-
-      .wrapper .social_media ul li {
-        width: 45px;
-        height: 45px;
-        background: linear-gradient(to right, #455a64, #353f43);
-        margin-right: 10px;
-        border-radius: 5px;
-        text-align: center;
-        line-height: 45px;
-      }
-
-      .wrapper .social_media ul li a {
-        color: #fff;
-        display: block;
-        font-size: 18px;
-      }
-      .logout_profile {
-        text-decoration: none;
-        color: white;
-      }
-    </style>
-    <div class="wrapper">
-      <div class="left">
-        <img src="img/user.png" alt="user" width="120" height="100" />
-        <% userInfo.forEach(function(user) { %>
-        <div class="name" id="nameProfile"><%=user.username %></div>
-        <% }) %>
-        <h4><a href="/logout" class="logout_profile"> Log out</a></h4>
-      </div>
-      <div class="right">
-        <div class="info">
-          <h3>Information</h3>
-          <div class="info_data">
-            <div class="data">
-              <h4>Email</h4>
-              <% userInfo.forEach(function(user) { %>
-              <p><%=user.email %></p>
-              <% }) %>
-              <h4>City</h4>
-              <% userInfo.forEach(function(user) { %>
-              <p><%=user.city %></p>
-              <% }) %>
-            </div>
+                  <img class="cupck" src="img/1628076132_127253.gif" width="300px" alt="rulet" />
+        
+                    <a href="/deleteDessert/<%=dessert._id %> " method="post"><i class="fa fa-trash"></i></a>
+              </div>
+              <div class="food-card_content">
+                  <div class="food-card_title-section">
+                      <p class="food-card_title"><%=dessert.name %> </p>
+                      <p class="food-card_author" style="color: black"><%=dessert.author %> </p>
+                  </div>
+                  <div class="food-card_bottom-section">
+                      <div class="space-between">
+                          <div>
+                              <span class="fa fa-fire"></span><%=dessert.calorie %> 
+                              <span class="fa fa-clock"></span><%=dessert.time %> 
+                          </div>
+                          <div class="pull-right">
+                              <span class="badge badge-success"><%=dessert.categories %> </span>
+                          </div>
+                      </div>
+                      <hr>
+                      <p class="description">Fdsfdfsd</p>
+                      <div class="readMore">
+                        <form action="/toRecept/<%=dessert._id %> ">
+                        <button class="btn button-outline button-one"> 
+                          <span>Read More</span>
+                        </button>
+                      </form>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="projects">
-          <h3>Favourite recipes:</h3>
-          <div class="projects_data">
-            <div class="data">
-              <h4>Recent</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </body>
-</html>
+     <% }) %>
+      </div>
+      
+      
+</section>
+<!--endContent Section-->
+<br>
+ <div id="map"></div>
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIb_aaM3oosxNg9v3LqUlDbTEpJC133hQ&callback=initMap">
+    </script>
+ </body>
+ </html>

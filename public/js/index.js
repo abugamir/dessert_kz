@@ -1,11 +1,15 @@
-
-let map;
+let map
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat:51.1801, lng: 71.4459 },
+    center: { lat: 51.1801, lng: 71.4459 },
     zoom: 8,
-  });
+  })
 }
 
-window.initMap = initMap;
+window.initMap = initMap
+
+function loginToProfile() {
+  document.getElementById("loginID").href = "/profile"
+  document.getElementById("loginID").innerText = "Profile"
+}

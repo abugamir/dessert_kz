@@ -58,11 +58,25 @@
 }
 .labelInput {
   margin: 0 15px;
-  display: inline;
+  display: inline-block;
 }
 .button {
   padding: 5px 15px;
+  margin-top: 30px;
 }
-.button:hover{
+.button:hover {
   color: #455a64;
+}
+
+.desc_label {
+  vertical-align: top;
+}
+
+.desc {
+   margin-top: 50px;
+}
+
+.desc_input {
+  width: 300px;
+  height: 100px;
 }
