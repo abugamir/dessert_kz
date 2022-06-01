@@ -52,6 +52,9 @@ exports.registerPost = (req, res) => {
     email: req.body.email,
     city: req.body.city,
   })
+
+  res.cookie("islog", "islog")
+
   const errors = validationResult(req)
   console.log(errors)
 
