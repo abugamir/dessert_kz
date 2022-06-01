@@ -19,9 +19,8 @@ var dessertSchema = new mongoose.Schema({
   calorie: {
     type: String,
   },
-  image: {
-    data: Buffer,
-    contentType: String,
+  link: {
+    type: String,
   },
 })
 const dessertDB = mongoose.connection.useDb("dessertDB")

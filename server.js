@@ -89,6 +89,22 @@ app.use(
   receptRouter
 )
 
+app.get("/rulet", (req, res) => {
+  res.render("rulet")
+})
+
+app.get("/honeydew", (req, res) => {
+  res.render("honeydew")
+})
+
+app.get("/milk", (req, res) => {
+  res.render("moloko")
+})
+
+app.get("/tartaletka", (req, res) => {
+  res.render("tartles")
+})
+
 app.post("/addDessert", (req, res) => {
   upload(req, res, (err) => {
     if (err) console.log(err)

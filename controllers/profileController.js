@@ -81,6 +81,7 @@ exports.addToWishDessert = (req, res) => {
         calorie: dessert.calorie,
         categories: dessert.categories,
         description: dessert.description,
+        link: dessert.link,
       })
 
       LikedDessert.save()
